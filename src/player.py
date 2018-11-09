@@ -12,9 +12,10 @@ import os
 import sys
 import time
 import random
-from colorama import *
+from colorama import Fore
+from colorama import Style
 from items import items
-from item import *
+from item import Treasure, Weapon, Shield, Armour, Item, Lightsource
 
 
 # Displays each character of the string in intervals, produces
