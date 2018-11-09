@@ -52,10 +52,10 @@ def setup_player():
 
     os.system('clear')
     print(question1)
-    player_name = input(" Name > ")
+    player_name = input(" Name > ").capitalize()
 
     while player_name == '':
-        player_name = input(" Name > ")
+        player_name = input(" Name > ").capitalize()
 
     os.system('clear')
     print(question2)
@@ -92,5 +92,19 @@ def setup_player():
     if result.lower() in ['yes', 'y']:
         print("Success")
         # Setup player
+        player.name = player_name
+        player.sex = player_gender
+        player.job = player_job
+        player.room = room['outside']
+        player.weapon = items['EmptyW']
+        player.armour = items['EmptyA']
+        player.shield = items['EmptyS']
+        player.hand = items['EmptyL']
+        player.hp = 100
+        player.max_hp = 100
+        player.mp = 100
+        player.max_mp = 100
+        player.gold = 0
+        player.game_over = False
     else:
         setup_player()
