@@ -14,6 +14,7 @@ from colorama import Style
 from item import Lightsource
 
 
+# Draws the title screen
 def draw_title():
     col = f"{Fore.GREEN}"
     s = (""
@@ -39,6 +40,7 @@ def draw_title():
     print(s)
 
 
+# Handles the commands for the title screen
 def handle_title_selections():
     option = input("> ")
 
@@ -62,6 +64,7 @@ def tprint(string, speed=0.05):
         time.sleep(speed)
 
 
+# Sets up the player
 def setup_player():
     question1 = "\n Enter Your Character's Name\n"
     question2 = "\n Are you male or female?\n"
@@ -132,11 +135,9 @@ def setup_player():
 
 
 # TODO: Simplify/Abstract this
-""" Check if the item exists in the Items dict, and if exists,
-    Use the player pickup method to pickup the item, if not,
-    return a message printing item not found """
-
-
+# Check if the item exists in the Items dict, and if exists,
+# Use the player pickup method to pickup the item, if not,
+# return a message printing item not found
 def item_exists(item):
     bl = False
     for itm in items:
@@ -159,13 +160,10 @@ def room_message():
 
 
 # TODO: Simplify/Pretty up the actions
-""" Where the action happens
-    Ask's the player what to do next and
-    then handles the command that the player
-    has given it.
-"""
-
-
+# Where the action happens
+# Ask's the player what to do next and
+# then handles the command that the player
+# has given it.
 def prompt():
     tprint(f'\n {Fore.CYAN}What do you do?{Style.RESET_ALL}', 0.03)
 
